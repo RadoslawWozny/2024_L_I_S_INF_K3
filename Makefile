@@ -10,7 +10,7 @@ test:
 	PYTHONPATH=. py.test --verbose -s
 docker_build:
 	docker build -t hello-world-printer .
-USERNAME=radoslawwozny  
+USERNAME=radoslawwozny
 TAG=$(USERNAME)/hello-world-printer  
 docker_push: docker_build  
 	@docker login --username $(USERNAME) --password $${DOCKER_PASSWORD}; \  
